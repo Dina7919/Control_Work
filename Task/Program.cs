@@ -6,21 +6,25 @@
 }
 
 void ShowArray(string[] array, int length) {
+    Console.Write("[ ");
     for (int i = 0; i < length; i++)
         {
             Console.Write(array[i] + " ");
-        }   
+        }
+    Console.Write("]");   
 Console.WriteLine();
 }
 
 void ShowNewArray(string[] array, int length) {
-    int newLength = new Random().Next(0,3);
-    string[] newArray = new string[newLength];
-    for (int i = 0; i < newLength; i++)
+    Console.Write("[ "); 
+    for (int i = 0; i < length; i++)
         {
-            newArray[i] = array[new Random().Next(0,length)];
-            Console.Write(newArray[i] + " ");
+            if (array[i].Length < 3)
+            {
+                Console.Write(array[i] + " ");
+            }
         }   
+        Console.Write("]"); 
 Console.WriteLine();
 }
 
